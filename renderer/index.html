@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self'" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/loadImg.js" defer></script>
+    <title>Image Scaling</title>
+  </head>
+  <body class="bg-fuchsia-900">
+    <div
+      class="max-w-xl m-auto h-screen flex flex-col align-center justify-center"
+    >
+      <div class="flex flex-col w-full items-center justify-center bg-grey-lighter">
+        <label
+          class="w-64 flex flex-col items-center px-4 py-7 bg-white text-gray-500 rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:text-fuchsia-800"
+        >
+        <img id="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAAFU0lEQVR4nO2ay28bRRzHP2s7iU1C2/QBaVW1VWiQqlRqkVrav6GqhERBHDiDxLG33go3LlwqThVHEBSpXCskOFFERSXIw3ZCHnYax4mTOInt2ht7nxxcFzfZHe9stjXQ/UiWZc/8Zub3nZnfPHYhJCQkJCQkJCQkJCQk5OVD8ZLpes5OaPXqjViE92KKMgx23G+Fhg0PHut+zTtRA5IKyjeD/Qdu3xtRGp0MOgrwyUxpuC8W/TEKp4NoYcmwSapGEEV1YiyCdfW384fzokxCAa7n7IStVydazh+KRRhJRElE3M3ymsnMtumanlINtgxb3PTgGDvYP3hZNBJiImutXr0Rjzadv/hqD9cO9RHrMGZs4Iu8SkGzdqXlGtaLdB7g/EZt6yPgS7cMEZF1TOF9aPa8F+edMOzmsE+pBo8a7iPjeaHAh6J04QiIRJRTYDOSiD51Pls3uV9xDmIm8EfV4HfJIDewqXP5zgrHU1V66rtHjgg9HiF/ZoCH14YoDfU6ZTkrshcLgJ0A2NfW9T+Xdb4qbEs1UsTAps67n83RV/M3OnrqFqf+rHBspsbdm6epHuzZVYXIXjgFXgSX76z4dr6d3prJpe9XpO26LsDxVDW4spLyZXkSoD1w61awUVx2zovo9VGWJwEmagZF3aKoW/xU0qQr+TcjDIItirrF50sqAHmH9f2/TNdjQLcJBeh2A7qNlAAvdhv/YvAUBFtUTW8KWKZFJp2itL7OgcNHGB4dJRJ11lqPRwJbCrVEVNpGagTkNW87tsXZGTZWCpiGyUahQG521r3MM8KdqhRLo/JleRbA61G2vLHB6mLumf8Ki4uUikXH/A+vDaH1y/fcTur9MR58MCRtJxRA9ihr6Brzk0nHtEwyhd7YvYkqDfVy9+ZpMhf2ocXlY7IWj5C5sJ8fPn2D2uA/ByFTraEV8tRzGaG98IR/aWxTKuzNjk+wubrqmj545DXefOucTJG+MEobGOXS09/j71x09TOwZXBtKS90HmBrfY31/HJQVTpiqrVnnO9EIAI01G0WZ/7ylHdhepq6qgZRrSNmxbvzEIAAtm0zNzmJaXhbISzTZG4iiW27L321xxXG7//K2C/3qZYrUu2x9I434c+wZwHymSzVclnKplYpk88sOKaZhsnc+CR1VaWxvc3s2BiGLnHFJnlc35MAtUqZ5UzWl+1yJuMo3M4pojUaZNNp323shG8BvAxlEU5TZ2ttjeLy7iC5ubpGcUX+ussLvgUIIpi1B0+t0SCTcu/phalpGtvBXca28CVAkMtZa/nMptLCuW4aBvPJJDbBnsikBdA1jWx6KtBGzCdTrlvldh5vlVjJPgq0bmkBFqamHLe0/rGxTO/X4ktz89JLowhpASqbW4FV3kTueZttW2TTqcBq7yTArov2Y8PDRKNS1wiB41a/1ag7/S18WNDBEyUN9tvt/xw9eYKjJ0+IzQLEVGuYlVJzh9e2yak/mvdahPtlBB1GgAJfe63leWCUNtDXC82e9flARonEvhWlCwUY7D9wGxjzVfMekT3VOaGgpKvRgVuiPEIB7o0ojQjWVbogguypbicKSlqJRa7MXRkRno48heDRlN3br299/ORlg7N0eOQcBPVcxs+wV1GYVpTYd9XowK1OzoeEhISEvOz4ePPPlT7gFSC+45MAok/qirV9A7SeZLQuAgya71q2vk1gG6jv+KhAIEvcXgQYAF4HDgP7AceX9J4jGlAGikCB5ovS0vgV4BxwfA/2QWMDOWBC1tDvneD/5k2BvfRgPzBE96ZAA6jQpSnghFsQjOMe/HYGQadguDMABhoE/wZOQ2fMkjY9SgAAAABJRU5ErkJggg==" alt="image-icon">
+          <span class="mt-2 leading-normal">Select an image to resize</span>
+          <input id="img" type="file" class="hidden" />
+        </label>
+        <img id="preview" class="hidden mt-2" alt="preview" width="150" height="100"/>
+      </div>
+
+      <!-- Form -->
+      <form id="img-form" class="hidden">
+        <div class="mt-6">
+          <label class="mt-1 block text-white text-center w-80 m-auto py-3 shadow-sm border-gray-300 rounded-md">
+            Select the target device:
+          </label>
+        </div>
+
+        <div class="mx-6 grid grid-cols-2 gap-2">
+          <img id="laptop" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAADIklEQVR4nO2bz2vUQBTHP5Ns1621LbVVClaEQi+C9ODFQu8eRLz1HxDaP0H/A/HgvQX/C0F7EfHHQbAeBBG0tCBtQdC6u213S9Mk48GEXXe7m5k02WzjfCBsMvuSefNN3svkbRYMBoPBYDAYDAbD/4hQMVraqM4UpbVcEMxZgsG4nbkS3u8fx91dlX3gpSe8h2uzl75GGUcKsLRRnRlCfBRCDJ/Ws4or+Vx3T3sYVcq+LWc/3Bjf6mZUiDpKUVrLwmJ4rCBYmCgxXbKxA9k8Ca+rDs/LjpJHO46nZJcQY7ZvPQEWuhlZUUcpCOYAFiZKzAw2Bg9gC5gfHVDyZuvIp+xKJdukkFLejrKJvALCmJ8u2W3feRLeVTvHtCvhwJPsOF7PBx8wEmUQKUBI85m/9akcz50+JDIE8o4RIGsHskZZAC/IYdnksvRQToKvqg7zIwO83Ut9JndqvHoNb6+Cf3wUaasswGrZYVVxwpMlbmUXt1pRts9VDvDqNa3BQ94E2NMbPORMAJWYbyVXAuDr36LyJUAMjABZO5A12gLkbSaoLcCBly8FtAXocVkrdbQEyKKslTaRzwJ9UNZKlUgBelDHzxRzG8zagawxAmTtQFJIL95PbrkQQHoux7s/Y+2rXBLLmn/qfDEeeztxJgTQrfPp0PchEKfOp0P/CxCjzqdD3wsQp86nQ9sbIk9vvrkjkStCiCtJdfJj5jzPHkxr7XPv0SaXN+pJuQCwLbAW76/Nv2hubL8CBMtJDh5gcr3O5Lr6YCa/1ZIePMCUxF9pbTzpLjCVdM8Adx9vpnFYXa62NvR9DkibkwTY7rkXvaPtjbE2AQTWIvkUYQshFrN2wmAwGPoKpbfFO2ADg0AROBcsxabtIo2Jlk3jjhO+W2sF7QAe4AfrYRnaD9oBXMABjoLPcD3cPmyy1UJVgAIwAYwBo8AFoBSnwxQ5BGpAFSgDv/grXFdUBLgOXKNxts4KHvAd+NLNKM9TYRksXdEJgXHgIn9DYAji/3MkJZpD4DewS0Ih0IluSTBsC5Ngc8ILk6Bo+t6lcbbCJNiaGJ2WJZEk+AecTQDN0vB0HAAAAABJRU5ErkJggg==" alt="image-icon" class="pointer">
+
+          <img id="tablet" src="data:image/png;base64,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" alt="image-icon" class="pointer">
+
+
+          <img id="android" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAAEZUlEQVR4nO2bzU8bRxiHn1kvtgGHGHCFaSqIWilWi0IkQg7QRFFTqVJOVXvJLYdIPXDIuf0TIlXqrcqhlyqHiEOVtOohPYRWKKhULVU/RFTKqRUB6jaAP4m/dqcHf2DMbgDvbDYo+0jW2szMO+/8Zvad8esFfHx8fHx8fHxeUIQqQx/8kTkVDoqbOkxogs7msrKEz76Z5Uk+fyBbnZFuRicnrYqyCL7VhPnR/GhsSYHbaCqMTC1lEpEgPwcFl1oHD5AzJP2D8QPb64/b1j2G5F3T1ObPLmwOtenuLpQIoHeIm5oQEbvy1ZJBfHiIaKwfIewXnRCCaCxGfGh4vy6jui4+adPdXegqjHQIMQHSsuzvokGqIgkEdBJjYyq6qyHfUWHF+QqQUhPIMMDlviA3TnZzuS9I3pQsbldYKZqOu7DhGFI69l/JLVDnYk8QXQgu9gRZzFdIVaxXxfOEUgF0sXMtP/9jBxQLcBTxBfDaAa/xBfDaAa9RKkB91zsCu18DpQLMZkpUpGQ2U1Jp1lWUHIXr3NsscW/z6Awe/BjgC+CKAC9sEKyTN3cUOHcnybWph0xOryP2+WIoTJicXufa1EPO3Um64doeXBFgtekr8MjMBoGyZOT+BhduPbIVQZhw4dYjRu7X6s9suOHaHpTuAgArRZPNys4ol8/3NgaTmEvR828ZGRBE1wqEcwaFSIDUy2E0QxJfzu9q9yxQIkBFVvN+qyWDrZYAMH9lEL1okJhLATC4vDsx2pWu0JXO1T5JQPDn+SjzVwYt+zLyOYxsGrNcgjPORVIiwA/Zsm2Z1CAbC9WGth8CCWReCmGV6ylv/oeRzVQ/aGoS2q5vg6/9mObsV8kD598FMP5lklcX0rv+buSzO4NXiKsC6AWTiek1xCG3RSHhzdvrdBR2YomRTT+lRfu4KkBibovOjAHAT+8P8Pmnb7Dw3oBl3dbycKbCqe+3GuVmseiKj64KcPK3bOP94qV+yiGNxbf7LetalQ//UlvypmuZZXcFiK4VGu9Pz2ygF0zb/d2qvHfdnVlvRvk5oJn68gcYv5tk/K796c6qvDNt2NRWh6srYDvqTN98r6vzA7gswIOrJ8j3drTVNtfXwYOrJxR7tBdXJV45HeH2xwk3u3CMnw/w2gGv8QXw2gGv8QXw2gGv8QXw2gGvORICmMXC/pXaxP3DtgWNvF6pYPdw2TPD+QoQwgQO9ggo1bxe+XGyOquOBi/ytb4doeYWkMwcpJrKvJ4g8J0KO0oE0ALmh0Bqv3rK8npCSxEJXVdhSokA86OxJTMgR5HiC8B2ihXk9XKaHvhahvSxX996/S+nxnx8fNT9wwQQArqAcMurEwjU+tKbrgD1fFn9t7UK1c2xfjWAJ0Ch5bUNKEkZOxEgAgwAMeA4EFTh0CEoAWngMfAPhziLNNOuAGeAVxy0V40EVoDfD9uw3W3wCD0E83SczGA3EMe7W6BI9czhyS1ghV0QDGMf/FqDoFUwbA2ASoPg/2dyfSqmgQxCAAAAAElFTkSuQmCC" alt="image-icon" class="pointer">
+
+          <img id="iphone" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAAEXklEQVR4nO2bzW8bRRiHn/Gu7Ti2k5BYiaOWtBSJUilKUCJUNZeKViAqpPZAEVLvHDhwRPAXIA6Ia1Vx5lRuSBSEAOWU8NEqKqVNUatS3EhJm7rxx6b2er3DwXE+vckmnt1NxD6StXJ2/M47v515Z+adDYSEhISEhISE/E8Rqgx9cKf4SkdMXNbhVESQWH+vJuGr7yd5bhiubCVSSUYmJlrdKiH4OSLsT6dGMrMK3CaiwsiHs8XjqRjXY4IzmxsPUK5L+gazru31ZR3LppFcsO3I1Pgf+aE9ursBJQLoUXE5IkTK6f6cWSd7ZIieTB9COHc6IQQ9mQzZoSM7Vdmj6+LLPbq7AV2FkagQp0C2vPewWmfJkmiazvGxMRXVrSDfUmGl/R4gZUQgOwDO9cb4/GiSc70xDFtya9kiV7XbrsKBNFK27b+SIdDkdFcMXQhOd8W4ZVgsWa17xX5CqQC6WLvW9n/bAcUCHERCAYJ2IGhCAYJ2IGiUCtCc9Q7A7LeKUgEmiyaWlEwWTZVmPUXJUrjJtbzJtfzBaTzsgxggJIz8sMilj+/SUbJ8rz9wAYZ/fMrJq/OUMlEqaaUd0hWe1LibIJi9t8zfEz1Mvz/ohSs74okAht1agUTRYvS7RbL3DCppjQfjPfx2sZ++fyucvZIj9dRk4eVOZt7ppzAQ88K1LXgiwFyLLXDnksWFz+6TytdW//bin+Ut5boXTA7fLvP1F6964doWlMeAXNUmb20V4OTV+Q2N3477r3erdssRJT3Ako2835xZ51mLAKDVJEdvFFzZKgzG+fU953hQN8rUSwXsmgmjL+zZ5yZKBJgubf9kU89MdJcJgoWXEjjleWr5J9RLxcaXiJqEti/ToK25dzaVb70WqBultcYrxBcByr1RzKTmquzgXYNDd7YGx3rJ3RDaLb4IIIXgwXiXq7JCSs5ceUS0sjGQ2tWqF675txKceTuDHXVXXXzZIrp+KrU9yyz7J0CxP870xQFXZW++mWG5259lsa97gb/O9nHjfP/q97ouKAzENsSHuRNJfn/XnVAq8H33cf18P7nhNF1PquSG01STGsKWHLptEK3aPHwtjVQ0xbnB/+0X8PhYgsfH1s5QZUTwaNjxaNFTAt8OB00oQNAOBE0oQNAOBE0oQNAOBE0oQNAOBM2BEMCuVjyzHchSeDWvZ1acXi7zjfZ7gBA24O4VUBp5vdriQuOpttV4YazU3RZqhoDkJzfFVOb1BNovKuwoESCi2Z8ASzuVU5bXE5ElUvGPVJhSIsDUSGbW1uQIUnwDOD5iBXm9ckTXvpVxfWzmjRP/tGssJCRE3T9MAHGgE+jY9EkA2kpd+rorQHTl2jxbs2hMjs1rHXgOVDZ9lgElBwXtCJACBoAM0A34c6C/hgkUgEVgnl2sRdazVwFGgcNt/F41EsgBN3f7w71OgwfoTcDtaecJJoEswQ2BKo01RyBDoBVOQbAD5+C3OQi2CoabA6DSIPgfTPRgz/b3bx4AAAAASUVORK5CYII=" alt="image-icon" class="pointer">
+
+        </div>
+
+        <div class="mt-6">
+          <label class="mt-1 block text-white text-center w-80 m-auto py-3 shadow-sm border-gray-300 rounded-md">
+            Or just try with the custom option:
+          </label>
+        </div>
+
+        <div class="mt-4">
+          <label class="mt-1 block text-white text-center w-80 m-auto py-3 shadow-sm border-gray-300 rounded-md">Width</label>
+          <input
+            type="number"
+            name="width"
+            id="width"
+            class="mt-1 block w-80 m-auto p-3 shadow-sm border-gray-300 rounded-md"
+            placeholder="Width"
+          />
+        </div>
+
+        <div class="mt-4">
+          <label class="mt-1 block text-white text-center w-80 m-auto py-3 shadow-sm border-gray-300 rounded-md">Height</label>
+          <input
+            type="number"
+            name="height"
+            id="height"
+            class="mt-1 block w-80 m-auto p-3 shadow-sm border-gray-300 rounded-md"
+            placeholder="Height"
+          />
+        </div>
+
+        <!-- Button -->
+        <div class="mt-6">
+          <button
+            type="submit"
+            class="w-80 m-auto flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-fuchsia-500 hover:bg-fuchsia-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+          >
+            Resize
+          </button>
+
+      </form>
+
+      <p class="text-white text-lg text-center font-mono mt-6"><strong>File: </strong><span id="filename"></span></p>
+      <p class="text-white text-lg text-center font-mono mt-2"><strong>Output: </strong><span id="output-path"></span></p>
+    </div>
+  </body>
+</html>
